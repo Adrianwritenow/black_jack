@@ -11,25 +11,31 @@
 
 function handValue (hand) {
   let output = 0;
-
 for (var h = 0; h < hand.length; h++) {
-  let card = Number(hand[h]);
 
-  if (hand[h]=== "K", "Q,", "J") {
-  hand[h] = 10;
+  if (hand[h] === "K"||hand[h] ===  "Q" || hand[h] ===  "J") {
+  output += 10;
   }
+
   if(hand[h] === "A" && output <= 10){
-    hand[h] = 11;
+    output +=11;
   }
   if (hand[h] === "A" && output >= 10) {
-    hand[h]= 1;
+      output += 1;
   }
-  output = output + card;
+
+  if ( Number(hand[h]) != NaN) {
+
+    output+= Number(hand[h]);
+  }
+
+  console.log(output)
 
 }
 return output;
-}
 
+
+}
 
 
 
