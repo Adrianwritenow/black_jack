@@ -13,32 +13,32 @@ function handValue (hand) {
   let output = 0;
 for (var h = 0; h < hand.length; h++) {
 
-  if (hand[h] === "K"||hand[h] ===  "Q" || hand[h] ===  "J") {
-  output += 10;
+   if ( hand[h] === "K"||hand[h] ===  "Q" || hand[h] ===  "J") {
+     output+= 10;
   }
 
-  if(hand[h] === "A" && output <= 10){
-    output +=11;
+    else if(hand[h] === "A" && output <=10){
+
+    output +=11 ;
   }
-  if (hand[h] === "A" && output >= 10) {
+   else if (hand[h] === "A" && output > 10) {
       output += 1;
   }
+  //  if ( parseInt(hand[h]) != NaN) {
+    else {
+      output += parseInt(hand[h]);
+    }
 
-  if ( Number(hand[h]) != NaN) {
+  if (hand.includes("A") && output > 21) {
+    output -= 10;
 
-    output+= Number(hand[h]);
   }
 
-  console.log(output)
-
 }
+
 return output;
 
-
 }
-
-
-
 
 
 /* -----  Hints ------
