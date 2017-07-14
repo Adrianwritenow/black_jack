@@ -18,15 +18,15 @@ function handValue(hand) {
         output += 1;
       }
         //  if ( parseInt(hand[h]) != NaN) {
-        else {
-          output += parseInt(hand[h]);
-        }
+    else {
+      output += parseInt(hand[h]);
+    }
     if (hand.includes("A") && output < 12) {
       output += 10;
     }
 
   }
-return output;
+  return output;
 }
 
 /* -----  Hints ------
