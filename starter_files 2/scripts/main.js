@@ -15,12 +15,10 @@ function handValue(hand) {
     if (hand[h] === "K" || hand[h] === "Q" || hand[h] === "J") {
       output += 10;
     } else if (hand[h] === "A") {
-        output += 1;
-      }
-        //  if ( parseInt(hand[h]) != NaN) {
-  else {
-    output += parseInt(hand[h]);
-  }
+      output += 1;
+    } else {
+      output += parseInt(hand[h]);
+    }
   }
   if (hand.includes("A") && output < 12) {
     output += 10;
