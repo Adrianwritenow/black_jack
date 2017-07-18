@@ -21,10 +21,9 @@ function handValue(hand) {
     else {
       output += parseInt(hand[h]);
     }
-    if (hand.includes("A") && output < 12) {
-      output += 10;
-    }
-
+  }
+  if (hand.includes("A") && output < 12) {
+    output += 10;
   }
   return output;
 }
